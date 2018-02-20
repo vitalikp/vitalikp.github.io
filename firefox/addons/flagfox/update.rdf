@@ -7,6 +7,7 @@
 		<em:updates>
 			<RDF:Seq>
 				<RDF:li resource="urn:mozilla:extension:flagfox@vitalikp:5.2.4"/>
+				<RDF:li resource="urn:mozilla:extension:flagfox@vitalikp:5.2.5"/>
 			</RDF:Seq>
 		</em:updates>
 	</RDF:Description>
@@ -23,6 +24,22 @@
 				<em:updateLink>https://vitalikp.github.io/firefox/addons/flagfox/flagfox-5.2.4-fx+sm.xpi</em:updateLink>
 	
 				<em:updateInfoURL>https://vitalikp.github.io/firefox/addons/flagfox/changeLog-5.2.4.xhtml</em:updateInfoURL>
+			</RDF:Description>
+		</em:targetApplication>
+	</RDF:Description>
+
+	<RDF:Description about="urn:mozilla:extension:flagfox@vitalikp:5.2.5">
+		<em:version>5.2.5</em:version>
+		
+		<em:targetApplication>
+			<RDF:Description>
+				<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id><!-- Firefox -->
+				<em:minVersion>24.0</em:minVersion>
+				<em:maxVersion>56.*</em:maxVersion>
+		
+				<em:updateLink>https://vitalikp.github.io/firefox/addons/flagfox/flagfox-5.2.5-fx+sm.xpi</em:updateLink>
+	
+				<em:updateInfoURL>https://vitalikp.github.io/firefox/addons/flagfox/changeLog-5.2.5.xhtml</em:updateInfoURL>
 			</RDF:Description>
 		</em:targetApplication>
 	</RDF:Description>
