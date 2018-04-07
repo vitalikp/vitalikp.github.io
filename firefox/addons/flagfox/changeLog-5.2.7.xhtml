@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
+<title>Flagfox ESR 5.2.7</title>
+</head>
+<body>
+<h3>Flagfox ESR 5.2.7</h3>
+<ul>
+<li>ipdb:
+	<ul>
+	<li>update to flagfox 6.0.4(March 2018);</li>
+	<li>load db from profile directory;</li>
+	<li>counting size loaded db file;</li>
+	<li>more safely parse metadata file;</li>
+	<li>set db path on load metadata file;</li>
+	</ul>
+</li>
+<li>about:
+	<ul>
+	<li>add ipdb info section(size and load state);</li>
+	<li>remove “Download” link;</li>
+	<li>remove ipdb version from header<br/>
+		(see below in ipdb info section);</li>
+	</ul>
+</li>
+<li>actions:
+	<ul>
+	<li>replace example host in “fullURL” variable tooltip;</li>
+	<li>don't check favicon for “flagfox.wordpress.com” host;</li>
+	<li>remove “Xmarks” action<br/>
+		(shutting down after “May 1, 2018”);</li>
+	</ul>
+</li>
+<li>locale:
+	<ul>
+	<li>remove “action.xmarks” properties;</li>
+	</ul>
+</li>
+<li>javascript:
+	<ul>
+	<li>add modules: io, iputil, netutil;</li>
+	<li>add properties to “ipdb” object: created, ipv4, ipv6;</li>
+	<li>add functions to “ipdb” object: openMD, getstate;</li>
+	<li>remove “metadata.js” file<br/>
+		(not used since 5.2.0 version);</li>
+	<li>add “formatBytes” function to “Flagfox” object;</li>
+	<li>code optimization;</li>
+	</ul>
+</li>
+<li>don't send cookie about addon to “iplookup.flagfox.net” host;</li>
+<li>don't prompting report a bug to the site;</li>
+<li>remove support migrating prefs to webextesion;</li>
+<li>align labels in tooltip flag icon to the right;</li>
+</ul>
+</body>
+</html>
