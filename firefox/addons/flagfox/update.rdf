@@ -9,7 +9,6 @@
 				<RDF:li resource="urn:mozilla:extension:flagfox@vitalikp:5.2.4"/>
 				<RDF:li resource="urn:mozilla:extension:flagfox@vitalikp:5.2.5"/>
 				<RDF:li resource="urn:mozilla:extension:flagfox@vitalikp:5.2.6"/>
-				<RDF:li resource="urn:mozilla:extension:flagfox@vitalikp:5.2.7"/>
 			</RDF:Seq>
 		</em:updates>
 	</RDF:Description>
