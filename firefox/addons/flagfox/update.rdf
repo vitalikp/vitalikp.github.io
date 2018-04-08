@@ -60,20 +60,4 @@
 			</RDF:Description>
 		</em:targetApplication>
 	</RDF:Description>
-
-	<RDF:Description about="urn:mozilla:extension:flagfox@vitalikp:5.2.7">
-		<em:version>5.2.7</em:version>
-		
-		<em:targetApplication>
-			<RDF:Description>
-				<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id><!-- Firefox -->
-				<em:minVersion>52.0</em:minVersion>
-				<em:maxVersion>53.*</em:maxVersion>
-		
-				<em:updateLink>https://vitalikp.github.io/firefox/addons/flagfox/flagfox-5.2.7-fx+sm.xpi</em:updateLink>
-	
-				<em:updateInfoURL>https://vitalikp.github.io/firefox/addons/flagfox/changeLog-5.2.7.xhtml</em:updateInfoURL>
-			</RDF:Description>
-		</em:targetApplication>
-	</RDF:Description>
 </RDF:RDF>
