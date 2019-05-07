@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
+<title>EasyBlock 0.4</title>
+</head>
+<body>
+<h3>EasyBlock 0.4</h3>
+<ul>
+<li>bldb:
+	<ul>
+	<li>add “hasRules” getter property to blsite;</li>
+	<li>add functions to blsite: hasType, hasPath, hasHost, onBlock, addRule;</li>
+	<li>remove “type” parameter from “find” functions;</li>
+	<li>change “url” parameter to “hostname” in “find” functions;</li>
+	<li>remove functions from blsite: check, block;</li>
+	<li>remove functions: blockReq, blockResp, hasUrl, parse;</li>
+	<li>show blacklist load time in log;</li>
+	<li>use “blhost” class to identify hostname by domain levels;</li>
+	<li>write rule syntax error in log;</li>
+	<li>add DOM rule support;</li>
+	</ul>
+</li>
+<li>ui:
+	<ul>
+	<li>add “Filters” menu item to addon button;</li>
+	</ul>
+</li>
+<li>options:
+	<ul>
+		<li>init default prefs;</li>
+		<li>add “disabled” pref option;</li>
+	</ul>
+</li>
+<li>io:
+	<ul>
+		<li>don't print warning and error log category prefix;</li>
+		<li>print file name and line number in log (for error exceptions);</li>
+	</ul>
+</li>
+<li>javascript:
+	<ul>
+	<li>add “blockHttp” function to main module;</li>
+	<li>add “prefs” property to main module;</li>
+	<li>don't use URL class for parse uri;</li>
+	<li>add “blhost” module;</li>
+	<li>add “filter” module;</li>
+	<li>code optimization;</li>
+	</ul>
+</li>
+<li>filter document content with DOM rules;</li>
+</ul>
+</body>
+</html>
