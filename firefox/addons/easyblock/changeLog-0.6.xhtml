@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
+<title>EasyBlock 0.6</title>
+</head>
+<body>
+<h3>EasyBlock 0.6</h3>
+<ul>
+<li>blhost:
+	<ul>
+	<li>add “sld” property;</li>
+	<li>ignore dot at the end of domain name;</li>
+	</ul>
+</li>
+<li>bldb:
+	<ul>
+		<li>add “grpId” property to blsite;</li>
+		<li>clear db before load;</li>
+		<li>don't count blocked content;</li>
+		<li>write message to log on block content site;</li>
+		<li>add “get” function;</li>
+		<li>add CSS rule support;</li>
+	</ul>
+</li>
+<li>filter:
+	<ul>
+		<li>add “onEvent” function to Content and Process classes;</li>
+		<li>remove EVENT_FILTER constant;</li>
+		<li>add EVENT_TYPE constant;</li>
+		<li>remove “receiveMessage” function from Content and Process classes;</li>
+		<li>convert event type from string to int;</li>
+		<li>change “onFind” callback in “findDom” function (Content):<br/>
+			- change “dom” parameter to “data”;</li>
+		<li>implement toggle event;</li>
+		<li>add properties to dom event: grpId, css;</li>
+	</ul>
+</li>
+<li>content:
+	<ul>
+		<li>add properties to ContentObserver: enabled, _disabled, grpId, filter, styles;</li>
+		<li>add “toggle” function to ContentObserver;</li>
+		<li>add “disabled” getter and setter properties to ContentObserver;</li>
+		<li>remove “content” parameter from “onDomLoad” function in ContentObserver;</li>
+		<li>apply styles to document content with CSS rules;</li>
+	</ul>
+</li>
+<li>ui:
+	<ul>
+	<li>convert helper object to class: MenuToggle, GroupUI, WinUI;</li>
+	<li>add properties to WinUI class: menu, toolbox, addon;</li>
+	<li>add static properties to WinUI class: toolbarId, nextItemId;</li>
+	<li>add properties to GroupUI class: id, _enabled, winUI;</li>
+	<li>add “enabled” getter and setter properties to GroupUI class;</li>
+	<li>add functions to WinUI class: moveBtn, initToolbar, toggle;</li>
+	<li>add “toggle” function to GroupUI class;</li>
+	<li>remove properties: toolbarId, nextItemId, toolbox;</li>
+	<li>remove functions: createBtn, initToolbar, update, init;</li>
+	<li>fix incorrect “toolbarId” property name in “customize” function;</li>
+	<li>check button also exist in “hbox” toolbar container after customize;</li>
+	<li>move button after customize for all open windows;</li>
+	<li>don't show number rules in group menu item;</li>
+	<li>handle “aftercustomization” event for new opened window;</li>
+	<li>use “open” window method instead of “openDialog”;</li>
+	<li>add “Filters” window;</li>
+	<li>export WinUI class;</li>
+	</ul>
+</li>
+<li>javascript:
+	<ul>
+	<li>add “EventBus” class;</li>
+	<li>invoke filter toggle event;</li>
+	<li>add “disabled” getter and setter properties;</li>
+	<li>add OBS_WIN_OPEN constant;</li>
+	<li>add “topic” parameter to “reg” and “unreg” functions;</li>
+	<li>check addon state in “blockHttp” function;</li>
+	<li>handle “domwindowopened” notification in observer;</li>
+	<li>remove “topic” parameter from “watchWindow” function;</li>
+	<li>add “grpId” parameter to “toggle” function</li>
+	<li>update ui addon and group state in “toggle” function;</li>
+	<li>init at first “filter” property on startup;</li>
+	<li>code optimization;</li>
+	</ul>
+</li>
+</ul>
+</body>
+</html>
