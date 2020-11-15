@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
+<title>EasyBlock 0.7</title>
+</head>
+<body>
+<h3>EasyBlock 0.7</h3>
+<ul>
+<li>blhost:
+	<ul>
+	<li>fix hostname without sld;</li>
+	<li>allow domain name without dot;</li>
+	</ul>
+</li>
+<li>bldb:
+	<ul>
+		<li>add UA rule support;</li>
+		<li>allow round brackets and vertical slash in field values;</li>
+		<li>add “flags” field (disabled, hidden);</li>
+		<li>set “hidden” flag for default group;</li>
+		<li>generate syntax error for unknown rule;</li>
+		<li>show site rules in filters;</li>
+		<li>check site has path without query parameters;</li>
+		<li>check site has path with regular expression only in path parts;</li>
+		<li>use “group” field for group names;</li>
+		<li>deprecate “title” field for group names;</li>
+		<li>add constants: RULE_NONE, RULE_COMM, RULE_PROP;</li>
+		<li>don't allow empty site rule type;</li>
+		<li>generate exception for not valid selector on add dom rule;</li>
+		<li>write single log message record on handle syntax error;</li>
+		<li>generate syntax error without site rule type;</li>
+		<li>use BlRule class to parse rules;</li>
+		<li>generate syntax error when subrules is not supported;</li>
+		<li>check valid group name without regular expression;</li>
+		<li>remove “COMM_PATTERN” constant;</li>
+		<li>convert dom rule value to object;</li>
+		<li>ignore disabled subrules;</li>
+		<li>add ATTR content rule support;</li>
+	</ul>
+</li>
+<li>filter:
+	<ul>
+		<li>always call “clear” function in ContentObserver on reload event;</li>
+		<li>implement filter get event;</li>
+		<li>rename “css” property to “styles” in dom event;</li>
+		<li>rename “dom” property to “content” in dom event;</li>
+	</ul>
+</li>
+<li>content:
+	<ul>
+		<li>filter document content on “load” event;</li>
+		<li>clear site data before open another host;</li>
+		<li>apply styles to document content after receive dom event;</li>
+		<li>init “_disabled” property on create ContentObserver object;</li>
+		<li>init “enabled” property on receive dom event;</li>
+		<li>allow apply styles without dom rules;</li>
+		<li>don't allow filter added nodes without dom rules;</li>
+		<li>clear “hostname” property on change host;</li>
+		<li>remove attributes from node of document content with ATTR rules;</li>
+	</ul>
+</li>
+<li>ui:
+	<ul>
+		<li>don't add group menu item if group has “hidden” flag;</li>
+		<li>remove functions: customize, onLoadDB;</li>
+		<li>remove “wins” property;</li>
+		<li>remove dropdown arrow from addon button;</li>
+		<li>use “ui.svg#easyblock” image for addon button;</li>
+		<li>remove “checked” attribute on update menu toggle state to false;</li>
+		<li>don't set “type” attr menuitem to “checkbox” in MenuToggle class;</li>
+		<li>use “ui.svg#checkbox” image for menu item in MenuToggle class;</li>
+	</ul>
+</li>
+<li>io:
+	<ul>
+		<li>add properties: console, addonPath;</li>
+		<li>add functions: init, logMsg, saveFile;</li>
+		<li>remove “ADDON_PATH” constant;</li>
+	</ul>
+</li>
+<li>javascript:
+	<ul>
+		<li>blsite class:
+			<ul>
+				<li>add “print” function;</li>
+				<li>add “parse” static function;</li>
+				<li>add “path” parameter to “find” function;</li>
+				<li>add “content” parameter to “onBlock” function;</li>
+				<li>add “group” property;</li>
+				<li>add getter property: styles, content, hasPathes;</li>
+				<li>rename “query” property to “pathes”;</li>
+				<li>rename “addQuery” function to “addPath”;</li>
+				<li>remove “grpId” property;</li>
+			</ul>
+		</li>
+		<li>ContentObserver class:
+			<ul>
+				<li>add functions: filterDom, handleEvent, apply, filterNodeAttrs;</li>
+				<li>remove “onDomLoad” function;</li>
+				<li>add “hostname” property;</li>
+			</ul>
+		</li>
+		<li>WinUI class:
+			<ul>
+				<li>add “addGroup” function;</li>
+				<li>add “customize” static function;</li>
+			</ul>
+		</li>
+		<li>main module:
+			<ul>
+				<li>add functions: unloadWin, customizeUI, loadDBWin, getGroup;</li>
+				<li>remove “onLoad” parameter from “reload” function;</li>
+				<li>add “wins” property;</li>
+				<li>add “path” parameter to “findSite” function;</li>
+			</ul>
+		</li>
+		<li>add classes: BlRule, CssRule, PathRule, StrRule, DomRule;</li>
+		<li>convert helper objects to class: blsite, blgroup, bldb;</li>
+		<li>add “validName” static function to blgroup class;</li>
+		<li>remove “commRegEx” property from bldb class;</li>
+		<li>code optimization;</li>
+	</ul>
+</li>
+<li>set “User-Agent” request header with UA rules;</li>
+<li>check host on block by query paths in all site groups;</li>
+<li>don't skip shutdown addon actions;</li>
+<li>add “ui.svg” file;</li>
+<li>delete “ui-16.png” file;</li>
+</ul>
+</body>
+</html>
