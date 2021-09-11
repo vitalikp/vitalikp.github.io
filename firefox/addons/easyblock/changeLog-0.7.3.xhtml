@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
+<title>EasyBlock 0.7.3</title>
+</head>
+<body>
+<h3>EasyBlock 0.7.3</h3>
+<ul>
+<li>filter:
+	<ul>
+		<li>add “EventType” constant;</li>
+		<li>remove constants: EVENT_TOGGLE, EVENT_RELOAD, EVENT_GET, EVENT_DOM;</li>
+		<li>rename “clear” function to “reload” in Content class;</li>
+	</ul>
+</li>
+<li>content:
+	<ul>
+		<li>remove “DOMContentLoaded” handler before close window;</li>
+		<li>remove “beforeunload” handler on handle event;</li>
+		<li>add “MutConf” constant;</li>
+		<li>remove “config” property from ContentObserver class;</li>
+		<li>add functions to ContentObserver class: reload, destroy;</li>
+		<li>don't reset disabled addon state on clear site data;</li>
+		<li>clear site data before close window;</li>
+		<li>clear site data after found DOM rules;</li>
+		<li>don't remove DOM edit handler on reload event;</li>
+	</ul>
+</li>
+<li>ui:
+	<ul>
+		<li>add “_toggled” property to MenuToggle class;</li>
+		<li>add “toggled” getter and setter properties to MenuToggle class;</li>
+		<li>remove “update” function from MenuToggle class;</li>
+		<li>remove “enabled” getter and setter properties from GroupUI class;</li>
+		<li>remove “_enabled” property from GroupUI class;</li>
+	</ul>
+</li>
+<li>io:
+	<ul>
+		<li>add “newURI” function;</li>
+	</ul>
+</li>
+</ul>
+</body>
+</html>
