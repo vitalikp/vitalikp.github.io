@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
+<title>EasyBlock 0.7.4</title>
+</head>
+<body>
+<h3>EasyBlock 0.7.4</h3>
+<ul>
+<li>bldb:
+	<ul>
+		<li>add JS rule support;</li>
+	</ul>
+</li>
+<li>filter:
+	<ul>
+		<li>add “scripts” property to dom event;</li>
+	</ul>
+</li>
+<li>content:
+	<ul>
+		<li>apply scripts to document content with JS rules;</li>
+	</ul>
+</li>
+<li>javascript:
+	<ul>
+		<li>main module:
+			<ul>
+				<li>add “ADDON_PREF” constant;</li>
+			</ul>
+		</li>
+		<li>ContentObserver class:
+			<ul>
+				<li>convert functions to static: filterNodeAttrs, filterNodes;</li>
+				<li>rename “filterNodeAttrs” function to “filterAttrs”;</li>
+				<li>add “scripts” property;</li>
+			</ul>
+		</li>
+		<li>blsite class:
+			<ul>
+				<li>add “js” property;</li>
+				<li>add “addJs” function;</li>
+				<li>add “scripts” getter property;</li>
+			</ul>
+		</li>
+		<li>add “JsRule” class;</li>
+	</ul>
+</li>
+</ul>
+</body>
+</html>
