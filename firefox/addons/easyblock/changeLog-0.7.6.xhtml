@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
+<title>EasyBlock 0.7.6</title>
+</head>
+<body>
+<h3>EasyBlock 0.7.6</h3>
+<ul>
+<li>bldb:
+	<ul>
+		<li>properly detect comment in subrules;</li>
+	</ul>
+</li>
+<li>filter:
+	<ul>
+		<li>scroll content by horizontal on overflow;</li>
+		<li>reduce space between labels;</li>
+	</ul>
+</li>
+<li>content:
+	<ul>
+		<li>move obs variable to frame global scope;</li>
+		<li>remove “init” function;</li>
+		<li>use “SiteHandler” class;</li>
+		<li>filter document frame content with DOM rules;</li>
+	</ul>
+</li>
+<li>ui:
+	<ul>
+		<li>add “XHTML_NS” constant;</li>
+	</ul>
+</li>
+<li>javascript:
+	<ul>
+		<li>Site class:
+			<ul>
+				<li>remove “filter” property;</li>
+				<li>remove functions: destroy, filterDom, onFind, reload, clear;</li>
+				<li>add functions: toString, filter;</li>
+				<li>rename “onDomEdit” function to “onEdit”;</li>
+				<li>add “hostname” and “grpId” parameters to constructor;</li>
+			</ul>
+		</li>
+		<li>add “SiteHandler” class;</li>
+		<li>use child text node instead of xbl “value” attribute for label element;</li>
+		<li>use xhtml div element instead of xul vbox;</li>
+		<li>use xhtml fieldset element instead of xul groupbox;</li>
+		<li>code optimization;</li>
+	</ul>
+</li>
+<li>don't add handler to window if location bar is not visible;</li>
+</ul>
+</body>
+</html>
