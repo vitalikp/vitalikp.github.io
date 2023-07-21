@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
+<title>EasyBlock 0.7.7</title>
+</head>
+<body>
+<h3>EasyBlock 0.7.7</h3>
+<ul>
+<li>bldb:
+	<ul>
+		<li>bldb: add “clear” function;</li>
+		<li>don't use disabled state for rule with “comment” type;</li>
+	</ul>
+</li>
+<li>ui:
+	<ul>
+	<li>add “wm” constant;</li>
+	</ul>
+</li>
+<li>io:
+	<ul>
+		<li>remove “console” property;</li>
+		<li>add constants: cs, LogLevel;</li>
+		<li>add “log” helper object;</li>
+		<li>remove functions: logMsg, log, warn, error;</li>
+		<li>remove usage “Task.spawn”;</li>
+	</ul>
+</li>
+<li>filter:
+	<ul>
+		<li>remove “SCRIPT_CONTENT” constant;</li>
+	</ul>
+</li>
+<li>content:
+	<ul>
+		<li>init “enabled” property only for cached data of dom event;</li>
+		<li>don't filter document content for disabled site group<br/>
+		(in case when data of dom event is cached);</li>
+		<li>use target from event to remove listeners;</li>
+		<li>use unload event to unreg mutation observer<br/>
+		(fix unreg mutation observer for removed frame from document content);</li>
+		<li>preload site data on create DOM window;</li>
+		<li>append “nonce” attribute to script when possible;</li>
+	</ul>
+</li>
+<li>javascript:
+	<ul>
+		<li>main module:
+			<ul>
+				<li>add constants: gmm, wm, CONTENT_SCRIPT;</li>
+				<li>remove “loadScript” method from “ProcessAPI” helper object;</li>
+			</ul>
+		</li>
+		<li>SiteHandler class:
+			<ul>
+				<li>add “api” parameter to constructor;</li>
+				<li>add methods: findDom, onCreate;</li>
+			</ul>
+		</li>
+		<li>Site class:
+			<ul>
+				<li>add “getCspNonce” static method;</li>
+			</ul>
+		</li>
+		<li>DomRule class:
+			<ul>
+				<li>add “_parseAttr” method;</li>
+			</ul>
+		</li>
+		<li>WinUI class:
+			<ul>
+				<li>add “selectToolbar” static method;</li>
+			</ul>
+		</li>
+		<li>uitree helper:
+			<ul>
+				<li>add “addLabel” method;</li>
+			</ul>
+		</li>
+		<li>uitree helper:
+			<ul>
+				<li>remove “selectToolbar” method;</li>
+			</ul>
+		</li>
+		<li>remove “print” method from classes: CssRule, JsRule, PathRule;</li>
+		<li>use method declaration syntax;</li>
+		<li>remove usage “nsIDOMWindow” interface;</li>
+		<li>use once parameter for “addEventListener” method;</li>
+		<li>code optimization;</li>
+	</ul>
+</li>
+<li>clear db before reload;</li>
+<li>remove “content.js” frame script on shutdown addon;</li>
+<li>fix override “User-Agent” header in cross domain request<br/>
+(use “Origin” header in case when “Referer” is not set);</li>
+<li>add CN rule support (alias for domain name);</li>
+</ul>
+</body>
+</html>
