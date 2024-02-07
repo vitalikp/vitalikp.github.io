@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
+<title>EasyBlock 0.7.8</title>
+</head>
+<body>
+<h3>EasyBlock 0.7.8</h3>
+<ul>
+<li>bldb:
+	<ul>
+		<li>add “mtype” site subrule (to replace “type”);</li>
+		<li>deprecate “type” site subrule;</li>
+		<li>remove support “title” field for group names;</li>
+		<li>don't add logging message to log on block content site;</li>
+		<li>write message to log with debug log level:
+			<ul>
+				<li>on adding site to group;</li>
+				<li>on adding group;</li>
+			</ul>
+		</li>
+		<li>skip CR character earlier on parsing rules;</li>
+		<li>don't add null values to result on parsing rules;</li>
+	</ul>
+</li>
+<li>filter:
+	<ul>
+		<li>export “EventType” constant;</li>
+		<li>export “EventBus” class;</li>
+		<li>don't export classes: Process, Content;</li>
+		<li>move “_cache” global variable to “content” module;</li>
+		<li>rename module to “eventbus”;</li>
+		<li>add “cpmm” constant;</li>
+		<li>use by default child process message manager;</li>
+	</ul>
+</li>
+<li>ui:
+	<ul>
+		<li>remove “Notify” helper;</li>
+		<li>aggregate menu styles with addon button style class;</li>
+		<li>remove “menuToggle” style class;</li>
+		<li>use “ui.svg#menu” image for menu item with child menu;</li>
+	</ul>
+</li>
+<li>content:
+	<ul>
+		<li>unreg process handler on “unload” event;</li>
+		<li>export “SiteHandler” class;</li>
+		<li>remove “ContentAPI” helper;</li>
+	</ul>
+</li>
+<li>javascript:
+	<ul>
+		<li>main module:
+			<ul>
+				<li>add “FRAME_SCRIPT” constant;</li>
+				<li>remove “CONTENT_SCRIPT” constant;</li>
+				<li>remove “ProcessAPI” helper;</li>
+				<li>rename “filter” property to “bus”;</li>
+			</ul>
+		</li>
+		<li>SiteHandler class:
+			<ul>
+				<li>add “global” parameter to constructor;</li>
+				<li>remove “api” parameter from constructor;</li>
+				<li>remove “doc” parameter from “onFind” method;</li>
+				<li>rename “_filter” property to “bus”;</li>
+			</ul>
+		</li>
+		<li>blsite class:
+			<ul>
+				<li>remove “content” parameter from “onBlock” method;</li>
+				<li>rename “type” property to “mtypes”;</li>
+			</ul>
+		</li>
+		<li>BlRule class:
+			<ul>
+				<li>add “parseFlags” static method;</li>
+			</ul>
+		</li>
+		<li>EventBus class:
+			<ul>
+				<li>add methods: onEvent, unregEvent, _sendEvent;</li>
+				<li>add “mm” property;</li>
+				<li>remove properties: handler, api;</li>
+			</ul>
+		</li>
+		<li>WinUI class:
+			<ul>
+				<li>rename “updateGroup” method to “onToggle”;</li>
+				<li>add properties: _disabled, win;</li>
+				<li>add “disabled” getter and setter property;</li>
+				<li>add methods: onState, notify, onReload, handleEvent;</li>
+				<li>remove “updateState” method;</li>
+				<li>add “win” parameter to constructor;</li>
+				<li>remove “doc” parameter from constructor;</li>
+			</ul>
+		</li>
+		<li>ui helper:
+			<ul>
+				<li>remove “notify” method;</li>
+				<li>add methods: addLabel, newMenuItem, newMenu;</li>
+			</ul>
+		</li>
+		<li>Process class:
+			<ul>
+				<li>inherit “EventBus” class;</li>
+				<li>remove properties: bus, api;</li>
+				<li>add methods: destroy, _sendEvent;</li>
+				<li>move class to main module;</li>
+				<li>rename class to “ProcessBus”;</li>
+			</ul>
+		</li>
+		<li>Content class:
+			<ul>
+				<li>inherit “EventBus” class;</li>
+				<li>remove properties: bus, api;</li>
+				<li>add “destroy” method;</li>
+				<li>move class to “content” module;</li>
+				<li>remove “onFind” parameter from “findDom” method;</li>
+				<li>add “mm” parameter to constructor;</li>
+				<li>rename class to “ContentBus”;</li>
+			</ul>
+		</li>
+	</ul>
+</li>
+<li>unreg content handler on shutdown addon;</li>
+<li>add “frame.js” script;</li>
+<li>load “frame.js” frame script instead of “content.js”;</li>
+<li>add “menu” image to “ui.svg” file;</li>
+</ul>
+</body>
+</html>
