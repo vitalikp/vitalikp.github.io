@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
+<title>EasyBlock 0.7.9</title>
+</head>
+<body>
+<h3>EasyBlock 0.7.9</h3>
+<ul>
+<li>bldb:
+	<ul>
+		<li>change log message on load db;</li>
+	</ul>
+</li>
+<li>ui:
+	<ul>
+		<li>fix select toolbar for addon button without “customizationtarget” attr;</li>
+		<li>don't select toolbar for addon button from non existence toolbars;</li>
+		<li>addon button:
+			<ul>
+				<li>apply disabled state without “iconsize” attr;</li>
+				<li>apply rounded corners to image;</li>
+			</ul>
+		</li>
+		<li>remove “menuitem” element binding;</li>
+	</ul>
+</li>
+<li>content:
+	<ul>
+		<li>don't clear frames on open another host;</li>
+		<li>don't unreg mutation observer on open another host;</li>
+		<li>execute script with sandbox when inline scripts<br/>
+			not allowed by CSP;</li>
+	</ul>
+</li>
+<li>javascript:
+	<ul>
+		<li>SiteHandler class:
+			<ul>
+				<li>rename “frames” property to “sites”;</li>
+				<li>move “site” property to “sites” (to store in map);</li>
+				<li>remove “isFrame” parameter from “onFind” method;</li>
+				<li>remove “onFind” parameter from “findDom” method;</li>
+			</ul>
+		</li>
+		<li>ContentBus class:
+			<ul>
+				<li>rename “findDom” method to “dom”;</li>
+				<li>rename “obs” property to “handler”;</li>
+				<li>add “onSite” method;</li>
+			</ul>
+		</li>
+		<li>Site class:
+			<ul>
+				<li>add “res” parameter to “getCspNonce” static method;</li>
+				<li>rename “getCspNonce” static method to “getCsp”;</li>
+				<li>add “execJs” method;</li>
+			</ul>
+		</li>
+		<li>use “nsIIOService” interface instead of “nsIIOService2”;</li>
+	</ul>
+</li>
+</ul>
+</body>
+</html>

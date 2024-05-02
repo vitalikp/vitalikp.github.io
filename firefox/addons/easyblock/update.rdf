@@ -6,22 +6,22 @@
 	<RDF:Description about="urn:mozilla:extension:easyblock@vitalikp">
 		<em:updates>
 			<RDF:Seq>
-				<RDF:li resource="urn:mozilla:extension:easyblock@vitalikp:0.7.8"/>
+				<RDF:li resource="urn:mozilla:extension:easyblock@vitalikp:0.7.9"/>
 			</RDF:Seq>
 		</em:updates>
 	</RDF:Description>
 
-	<RDF:Description about="urn:mozilla:extension:easyblock@vitalikp:0.7.8">
-		<em:version>0.7.8</em:version>
+	<RDF:Description about="urn:mozilla:extension:easyblock@vitalikp:0.7.9">
+		<em:version>0.7.9</em:version>
 		<em:targetApplication>
 			<RDF:Description>
 				<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id><!-- Firefox -->
 				<em:minVersion>52.0</em:minVersion>
 				<em:maxVersion>53.*</em:maxVersion>
 
-				<em:updateLink>https://www.vitalikp.name/firefox/addons/easyblock/easyblock-0.7.8.xpi</em:updateLink>
+				<em:updateLink>https://www.vitalikp.name/firefox/addons/easyblock/easyblock-0.7.9.xpi</em:updateLink>
 	
-				<em:updateInfoURL>https://www.vitalikp.name/firefox/addons/easyblock/changeLog-0.7.8.xhtml</em:updateInfoURL>
+				<em:updateInfoURL>https://www.vitalikp.name/firefox/addons/easyblock/changeLog-0.7.9.xhtml</em:updateInfoURL>
 			</RDF:Description>
 		</em:targetApplication>
 	</RDF:Description>
