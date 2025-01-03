@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
+<title>EasyBlock 0.7.10</title>
+</head>
+<body>
+<h3>EasyBlock 0.7.10</h3>
+<ul>
+<li>ui:
+	<ul>
+		<li>use window message manager to send events to content bus;</li>
+		<li>rename “process” event bus name to “ui”;</li>
+		<li>load frame script on init window<br/>
+			(to be sure that all events handles in time from frame script);
+		</li>
+		<li>clear groups only on reload db;</li>
+		<li>properly update “toggled” property in “MenuToggle” class;</li>
+	</ul>
+</li>
+<li>javascript:
+	<ul>
+		<li>main module:
+			<ul>
+				<li>remove “bus” property;</li>
+				<li>remove constants: FRAME_SCRIPT, gmm;</li>
+				<li>remove “value” parameter from “toggle” method;</li>
+			</ul>
+		</li>
+		<li>ProcessBus class:
+			<ul>
+				<li>add parameters to constructor: mm, winUI;</li>
+				<li>remove “addon” parameter from constructor;</li>
+				<li>add properties: winUI, scripts;</li>
+				<li>add “loadScript” method;</li>
+				<li>remove methods: get, findDom;</li>
+				<li>remove “addon” property;</li>
+				<li>rename class to “UiBus”;</li>
+				<li>move class to “ui” module;</li>
+			</ul>
+		</li>
+		<li>WinUI class:
+			<ul>
+				<li>add properties: bus, id;</li>
+				<li>add methods: onGet, onDom, openWin;</li>
+				<li>remove “loadGroups” method;</li>
+			</ul>
+		</li>
+		<li>GroupUI class:
+			<ul>
+				<li>add “addon” property;</li>
+				<li>remove “winUI” property;</li>
+			</ul>
+		</li>
+		<li>ui helper:
+			<ul>
+				<li>add “getWinId” method;</li>
+			</ul>
+		</li>
+		<li>SiteHandler class:
+			<ul>
+				<li>add “getWinId” static method;</li>
+				<li>add “tabId” property;</li>
+				<li>rename “_disabled” property to “disabled”;</li>
+			</ul>
+		</li>
+		<li>ContentBus class:
+			<ul>
+				<li>add “onToggle” method;</li>
+				<li>rename “reload” method to “onReload”;</li>
+			</ul>
+		</li>
+	</ul>
+</li>
+</ul>
+</body>
+</html>
