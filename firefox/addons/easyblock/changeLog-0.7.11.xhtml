@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
+<title>EasyBlock 0.7.11</title>
+</head>
+<body>
+<h3>EasyBlock 0.7.11</h3>
+<ul>
+<li>bldb:
+	<ul>
+		<li>remove “type” site subrule support (replaced with “mtype”);</li>
+	</ul>
+</li>
+<li>eventbus:
+	<ul>
+		<li>allow receive event from closed message manager;</li>
+		<li>remove support sync events;</li>
+	</ul>
+</li>
+<li>ui:
+	<ul>
+		<li>allow handle events from “content” module in “TabUI” class;</li>
+		<li>handle dom event in “TabUI” class;</li>
+		<li>send init event on receive frame event;</li>
+		<li>send site event on receive dom event;</li>
+	</ul>
+</li>
+<li>content:
+	<ul>
+		<li>send frame event on load frame script;</li>
+		<li>send close event before destroy event bus;</li>
+		<li>remove usage get event to init “disabled” property<br/>
+		    (replaced with init event);</li>
+		<li>remove usage sync call for dom event;</li>
+		<li>add “grpId” property to dom event;</li>
+		<li>always send dom event on create DOM window;</li>
+		<li>remove usage get event to check enabled site group<br/>
+		    (replaced with site event by checking “grpId” property<br/>
+		     for cached data);</li>
+	</ul>
+</li>
+<li>javascript:
+	<ul>
+		<li>EventBus class:
+			<ul>
+				<li>add “target” property to data of event on receive it;</li>
+				<li>remove “sendSyncEvent” method;</li>
+			</ul>
+		</li>
+		<li>UiBus class:
+			<ul>
+				<li>handle events: frame, close;</li>
+				<li>don't handle get event;</li>
+			</ul>
+		</li>
+		<li>WinUI class:
+			<ul>
+				<li>add methods: getGroup, getSite, onFrame, getTab, onClose;</li>
+				<li>add “tabs” property;</li>
+				<li>remove methods: onDom, onGet;</li>
+				<li>remove parameters from “toggle” method: grpId, value;</li>
+			</ul>
+		</li>
+		<li>GroupUI class:
+			<ul>
+				<li>remove “value” parameter from “toggle” method;</li>
+			</ul>
+		</li>
+		<li>MenuToggle class:
+			<ul>
+				<li>add “handler” property;</li>
+				<li>add “handleEvent” method;</li>
+				<li>don't pass “value” parameter to the “toggle” handler method<br/>
+		     		on handle command;</li>
+			</ul>
+		</li>
+		<li>EventType enum:
+			<ul>
+				<li>add values: FRAME, CLOSE, INIT, SITE;</li>
+				<li>remove “GET” value;</li>
+			</ul>
+		</li>
+		<li>SiteHandler class:
+			<ul>
+				<li>remove “findDom” method;</li>
+			</ul>
+		</li>
+		<li>ContentBus class:
+			<ul>
+				<li>add methods: frame, close, onInit;</li>
+				<li>handle events: init, site;</li>
+				<li>remove “get” method;</li>
+			</ul>
+		</li>
+		<li>add “TabUI” class;</li>
+	</ul>
+</li>
+</ul>
+</body>
+</html>
